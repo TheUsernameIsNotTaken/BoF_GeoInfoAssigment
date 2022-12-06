@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project by VM - Documentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+
+<body>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Máté Vágner<br>Geoinformatics<br>Project</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#context" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Historical Context</a> 
+    <a href="#user" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">User Guide</a> 
+    <a href="#technical" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Technical Documentation</a> 
+    <a href="#sources" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sources</a>
+    <a href="VM_beadando_index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Map</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Máté Vágner Geoinformatics Project</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="context">
+    <h1 class="w3-jumbo"><b>Project Documentation</b></h1>
+    <h2 class="w3-xxxlarge w3-text-red"><b>Historical Context.</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>
+      <h3 class="w3-xlarge w3-text-blue"><b>
+        <span>Artillery Analysis at the Battle of Fredericksburg</span></b>
+        <b class="w3-medium w3-text-blue">by <a href = "https://www.usna.edu/Users/oceano/pguth/website/plghome.htm" target="_blank">Professor Peter Guth</a></b>
+      </h3>
+    </p>
+    <p><h4 class="w3-large w3-text-black"><b>Introduction</b></h4></p>
+    <p>
+      The Battle of Fredericksburg was fought between General Robert E. Lee&acute;s Confederate Army of Northern Virginia and the Major General Ambrose E. Burnside&acute;s Union Army of the Potomac. It is remembered as one of the most one-sided battles of the American Civil War in which the Union Army suffered terrible casualties in frontal assaults on entrenched Confederate defenders. It is also remembered as one of the most significant artillery engagements of the war, which is the driving force behind the analysis.
+    </p>
+    
+    <p>
+      <img src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image001.jpg" width=458 height=285 onclick="onClick(this)" alt="Image from the battle.">
+    </p>
+    
+    <p><h4 class="w3-large w3-text-black"><b>Target Audience</b></h4></p>
+    <p>
+      The audience for this project could really be anyone from someone just curious about the battle to a student doing a research project on the effectiveness of artillery in battle. The visuals in the project give someone that is just taking a glance a good impression of how effective artillery was used. On the other hand, if someone is doing research on the battle, they can click on the individual batteries to get a picture and more detail.
+    </p>
+    
+    <p><h4 class="w3-large w3-text-black"><b>Process</b></h4></p>
+    <p>
+      Using Microdem and other GIS resources I was able to take a historic map of the battlefield and register it&acute;s location on Google Earth. The map was originally a jpg2000 file, which was converted to a PNG file which had to be registered. On the same map I put an overlay of major roads, streams and railroads using TIGER files from counties Stafford, Spotsylvania and Fredericksburg.
+    </p>
+    <p>
+      <img width=212 height=354 src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image002.jpg" onclick="onClick(this)" alt="Historical map.">
+                                         
+      <img width=213 height=352 src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image003.jpg" onclick="onClick(this)" alt="Historical map with hydrography.">
+    </p>
+    <p>
+      Using a DEM of the area, I was able to make weapon fans the artillery and make a visual representation of what each battery had the capability of targeting. This was done for both the Confederate and the Union artillery batteries. After the weapon fans were completed and adjusted, I made a database of it, which was placed onto the historic map.
+    </p>
+    <p>
+      <img width=206 height=235 src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image004.jpg" onclick="onClick(this)" alt="Confederate artillery positions with firing range on a topographic map.">
+                                         
+      <img width=206 height=235 src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image005.jpg" onclick="onClick(this)" alt="Union artillery positions with firing range on a topographic map.">
+    </p>
+    <p>
+      This final composite of maps, databases and other information gives a good visual representation of what each army was able to target using their artillery batteries and why this battle is considered to be a major artillery engagement.
+    </p>
+    <p><img width=248 height=414 src="https://raw.githubusercontent.com/TheUsernameIsNotTaken/BoF_database/main/image006.jpg" onclick="onClick(this)" alt="All the adobe maps merged together."></p>
+    
+    <p><h4 class="w3-large w3-text-black"><b>Summary</b></h4></p>
+    <p>
+      The entire project was very difficult to start. I had a very difficult time finding the required information on the batteries and type of artillery used at each battery. It was obvious that the Battle of Fredericksburg has a lack of historical information on it compared to more famous battles such as Antietam and Gettysburg. I also had a very difficult time registering my historic map. There was no coordinate system on my historic map which resulted in me having to try and register notable landmarks and intersections. The accuracy of the registered map compared to the real world is average at best, but for purposes of the artillery analysis it is still usable. I learned a great deal from this project, not only on the Battle of Fredericksburg, but the many capabilities of Microdem and the power that GIS contains.
+    </p>
+    
+    <p><h4 class="w3-large w3-text-black"><b>Metadata</b></h4></p>
+    <p>
+      NED: The National Elevation Dataset from <a href="https://www.usgs.gov/the-national-map-data-delivery" target="_blank">seamless.usgs.gov</a>.
+    </p>
+    <p>
+      TIGER: Data for Fredericksburg, Stafford and Spotsylvania counties gathered from <a href="http://www2.census.gov/geo/tiger/tiger2007" target="_blank">http://www2.census.gov/geo/tiger/tiger2007</a>.
+    </p>
+    <p>
+      Historic Map: The Library of Congress at <a href="http://memory.loc.gov/ammem/index.html" target="_blank">http://memory.loc.gov/ammem/index.html</a>.
+    </p>
+    
+    <p><h4 class="w3-large w3-text-black"><b>Credit</b></h4></p>
+    <p>
+      This summary is created by <a href = "https://www.usna.edu/Users/oceano/pguth/website/plghome.htm" target="_blank">Professor Peter Guth</a> of the <a href="https://www.usna.edu/homepage.php" target="_blank">US Naval Academy</a>.
+    </p>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Short User Guide -->
+  <div class="w3-container" id="user" style="margin-top:75px">
+    <h2 class="w3-xxxlarge w3-text-red"><b>User Guide.</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>When you open the project first, you will find a Leaflet map showing historical data about the battle of Fredericksburg. You will find a layer selector on the top right corner of the map. Hover over it to change base layer, or to select between which overlay layer(s) to show.</p>
+    <p><h3 class="w3-large w3-text-black"><b>Change Base Layer</b></h3></p>
+    <p>You can choose between OpenStreetMap(seen as OSM on the layer selector), MapBox's streets (seen as MapBox street on the layer selector) and MapBox's satelite(seen as Satelite on the layer selector). The default base layer is the Satelite layer. Choose one to set the base layer to an other one.</p>
+    <p><h3 class="w3-large w3-text-black"><b>Choose Overlay Layer</b></h3></p>
+    <p>You have four overlay layer to choose from, three of them being active at the start.</p>
+    <p>Choosing one of the "Confederate/Union Weapons fans" layers, will show the choosen side's artillery firing position's firing range with green, and will also shown a historical topographic and hydrographic map of the battlefield. You can choose to view only one of them at a time, and compare the historical and current landscape, or view both of them, and compare the two sides artillery support zones that way.</p>
+    <p>Selecting or deselecting the "Union/Confederate Arillery units" layers enable or disable the artilerry unit's markers in the map. Hover over these markers to see who commended which artillery unit during the battle, and click them to see what kind of artillery was used on which position.</p>
+    <p><h3 class="w3-large w3-text-black"><b>Documentation</b></h3></p>
+    <p>If you reading this, then: <b>Congratulation, You found this documentation!</b> Read it to know how the program works, and check out the sources.</p>
+    <p>PS: This project is not a political statement. Just after I found the creator of this database, and many other cool historical map records, as a History Nerd I had to make something history releated to my geoiformatics project. And since this database was the smallest, yet still complete one, I choose this.</p>
+  </div>
+  
+  <!-- Short Technical Documentation -->
+  <div class="w3-container" id="technical" style="margin-top:75px">
+    <h2 class="w3-xxxlarge w3-text-red"><b>Technical Documentation.</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The Project's map was created using Leaflet. The map's size is dinamically changing, trying to fill the available space. It has imageOverlay layers, geoJSON layers and generated markers by GeoJSON data. The database was in kmz, so I saved it into kml, and converted it into GeoJSON with an online converter. After convertion I needed ot adjust some feature data (like fixing the image links, but it was done easily and fast with an usage of a replace all command).</p>
+    <p><h3 class="w3-large w3-text-black"><b>Base Layers</b></h3></p>
+    <p>The baseLayers are loaded into tileLayer-s. The three if them added into a contlor layer as it's baseLayer-s. I used the codes and methods learned during the labor classes.</p>
+    <p><h3 class="w3-large w3-text-black"><b>Overlay Layer</b></h3></p>
+    <p>I set the three overlay layers to be active, by adding them into the map by either during map declaration or after, in at the end of GeoJSON loading process.</p>
+    <p>The "Confederate/Union Weapons fans" layers are both an imageOverlay layer using pre-defined coordinates and puctures from the database.</p>
+    <p>The "Union/Confederate Arillery units" layers are loaded from two GeoJSON files, using fetch. I used the "pointToLayer" option to create an marker with a defined custom icon, for every point feature in the datasets. I also used the "onEachFeature" option to generate a custom tooltip and popup for each marker, using the feature's metadata. This popup contains the feature's name, it's image and it's description, which contains the artillery's type. The tooltip only contains the feature's name, and it's "only show when hovered over" behavior is thanks to it's "permanent:false" option. <a href="https://leafletjs.com/reference.html#geojson" target="_blank">More info about the used options.</a></p>
+    <p><h3 class="w3-large w3-text-black"><b>Documentation</b></h3></p>
+    <p>To make the whole project and especially this documentation look nicer I used a w3.css tempalte. It's link is found in the sources part of the documentation <a href="#style_link">here</a>.</p>
+  </div>
+
+  <!-- Used Sources -->
+  <div class="w3-container" id="sources" style="margin-top:75px">
+    <h2 class="w3-xxxlarge w3-text-red"><b>Sources.</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>
+      <ul class="w3-ul w3-light-grey w3-left">
+        <li class="w3-padding-16">
+          <h3 class="w3-large w3-text-black"><b><a href="https://www.usna.edu/Users/oceano/pguth/website/so432web/projects/So432_final_projects.htm" target="_blank">Original KMZ </a></b></h3>
+          <span class="w3-opacity">by <a href="https://www.usna.edu/Users/oceano/pguth/website/plghome.htm" target="_blank">Professor Peter L. Guth</a> (<a href="https://www.usna.edu/homepage.php" target="_blank">US Naval Academy</a>)</span>
+        </li>
+        <li class="w3-padding-16">
+          <h3 class="w3-large w3-text-black"><b>Converted <a href="https://github.com/TheUsernameIsNotTaken/BoF_database" target="_blank">Battle of Fredericksburg database </a></b></h3>
+          <p class="w3-padding-8 w3-opacity">saved to kml from kmz by <a href="https://github.com/TheUsernameIsNotTaken" target="_blank">me</a>, using <a href="https://www.google.com/intl/hu/earth/versions/" target="_blank">Google Earth Pro</a></p>
+          <p class="w3-padding-8 w3-opacity">converted from kml to GeoJSON with <a href="https://mygeodata.cloud/converter/kml-to-geojson" target="_blank">MyGeodata Converter</a></p>
+        </li>
+        <li class="w3-padding-16">
+          <h3 id="style_link" class="w3-large w3-text-black"><b><a href="https://www.w3schools.com/w3css/tryw3css_templates_interior_design.htm" target="_blank">Style </a></b></h3>
+          <span class="w3-opacity">by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></span>
+        </li>
+      </ul>
+    </p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
