@@ -1,0 +1,8 @@
+Database by Professor Peter Guth of the US Naval Academy:
+https://www.usna.edu/Users/oceano/pguth/website/so432web/projects/So432_final_projects.htm
+
+Know how by Leaflet Documentation:
+https://leafletjs.com/reference.html
+
+Style by w3.css:
+https://www.w3schools.com/w3css/tryw3css_templates_interior_design.htm
